@@ -5,8 +5,11 @@ option(RDK_BUILD_CAIRO_SUPPORT "build support for Cairo drawing" OFF )
 option(RDK_BUILD_FREETYPE_SUPPORT "build support for FreeType font handling" ON)
 option(RDK_INSTALL_COMIC_FONTS "download and install comic-neue to maximize the \"utility\" of the comic mode in MolDraw2D" ON)
 
+
+
 if(RDK_BUILD_FREETYPE_SUPPORT AND RDK_INSTALL_COMIC_FONTS)
-  set(needDownload "TRUE")
+message("${RDKit_DataDir}/Fonts/ComicNeue-Regular.ttf check print")
+set(needDownload "TRUE")
   if(EXISTS "${RDKit_DataDir}/Fonts/ComicNeue-Regular.ttf")
     message("${RDKit_DataDir}/Fonts/ComicNeue-Regular.ttf already there, skipping the download")
     set(needDownload "FALSE")
