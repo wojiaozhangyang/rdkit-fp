@@ -16,8 +16,8 @@
 /.idea
 
 #- VS Code files
-/.vscode
-/.vs
+.vscode
+.vs
 
 #- Binary files
 __pycache__/

@@ -1228,7 +1228,7 @@ extern "C" CBfp makeRDKitBFP(CROMol data) {
   ExplicitBitVect *res = nullptr;
 
   try {
-    res = RDKit::RDKFingerprintMol(*mol, 1, 6, getRDKitFpSize(), 2);
+    res = RDKit::RDKFingerprintMol(*mol, 1, 30, getRDKitFpSize(), 2);
   } catch (...) {
     elog(ERROR, "makeRDKitBFP: Unknown exception");
     if (res) {
