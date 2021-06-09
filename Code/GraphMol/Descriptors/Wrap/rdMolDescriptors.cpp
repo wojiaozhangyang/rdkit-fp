@@ -19,6 +19,7 @@
 #include <GraphMol/Fingerprints/AtomPairs.h>
 #include <GraphMol/Fingerprints/MorganFingerprints.h>
 #include <GraphMol/Fingerprints/MACCS.h>
+#include <GraphMol/Fingerprints/Pubchem.h>
 #include <DataStructs/BitVects.h>
 
 #include <GraphMol/Descriptors/USRDescriptor.h>
@@ -1502,6 +1503,16 @@ BOOST_PYTHON_MODULE(rdMolDescriptors) {
 
   python::scope().attr("_GetAtomFeatures_version") =
       RDKit::Descriptors::AtomFeatVersion;
+
+
+  // ======
+  docString = "Returns the Pubchem keys for a molecule as an ExplicitBitVect";
+  python::def("GetPubchemKeysFingerprint",
+              RDKit::PubchemFingerprints::getFingerprintAsBitVect,
+              (python::arg("mol")), docString.c_str(),
+              python::return_value_policy<python::manage_new_object>());
+
+ 
   docString = "Returns the Atom Features vector";
   python::def("GetAtomFeatures", GetAtomFeatures,
               (python::arg("mol"), python::arg("atomid"),

@@ -431,6 +431,8 @@ Usage: FingerprintMols.py [args] <fName>
     - --useMACCS: use the public MACCS keys to do the fingerprinting
       (instead of a daylight-type fingerprint)
 
+    - --useubchem: use the public Pubchem keys to do the fingerprinting
+      (instead of a daylight-type fingerprint)
 """
 
 
@@ -468,6 +470,7 @@ def ParseArgs(details=None):
                                    'fpColName=',
                                    'maxMols=',
                                    'useMACCS',
+                                   'usePubchem',
                                    'keepTable',
                                    # SCREENING:
                                    'smilesTable=',
@@ -538,6 +541,8 @@ def ParseArgs(details=None):
       details.maxMols = int(val)
     elif arg == '--useMACCS':
       details.fingerprinter = MACCSkeys.GenMACCSKeys
+    elif arg == '--usePubchem':
+      details.fingerprinter = Pubchemkeys.GenPubchemKeys
     elif arg == '--keepTable':
       details.replaceTable = False
 

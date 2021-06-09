@@ -407,6 +407,27 @@ maccs_fp(PG_FUNCTION_ARGS) {
   PG_RETURN_BFP_P(bfp);
 }
 
+PGDLLEXPORT Datum       pubchem_fp(PG_FUNCTION_ARGS);
+PG_FUNCTION_INFO_V1(pubchem_fp);
+Datum
+pubchem_fp(PG_FUNCTION_ARGS) {
+  CROMol mol;
+  CBfp fp;
+  Bfp *bfp;
+
+  fcinfo->flinfo->fn_extra = searchMolCache(
+                                            fcinfo->flinfo->fn_extra,
+                                            fcinfo->flinfo->fn_mcxt,
+                                            PG_GETARG_DATUM(0),
+                                            NULL, &mol, NULL);
+
+  fp = makePubchemBFP(mol);
+  bfp = deconstructCBfp(fp);
+  freeCBfp(fp);
+
+  PG_RETURN_BFP_P(bfp);
+}
+
 PGDLLEXPORT Datum       avalon_fp(PG_FUNCTION_ARGS);
 PG_FUNCTION_INFO_V1(avalon_fp);
 Datum

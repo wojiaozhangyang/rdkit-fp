@@ -43,6 +43,7 @@
 #include <GraphMol/Fingerprints/AtomPairs.h>
 #include <GraphMol/Fingerprints/MorganFingerprints.h>
 #include <GraphMol/Fingerprints/MACCS.h>
+#include <GraphMol/Fingerprints/Pubchem.h>
 #include <GraphMol/Substruct/SubstructMatch.h>
 #include <GraphMol/Descriptors/MolDescriptors.h>
 #include <GraphMol/ChemTransforms/ChemTransforms.h>
@@ -1431,6 +1432,23 @@ extern "C" CBfp makeMACCSBFP(CROMol data) {
     res = RDKit::MACCSFingerprints::getFingerprintAsBitVect(*mol);
   } catch (...) {
     elog(ERROR, "makeMACCSBFP: Unknown exception");
+  }
+  if (res) {
+    std::string *sres = new std::string(BitVectToBinaryText(*res));
+    delete res;
+    return (CBfp)sres;
+  } else {
+    return nullptr;
+  }
+}
+
+extern "C" CBfp makePubchemBFP(CROMol data) {
+  auto *mol = (ROMol *)data;
+  ExplicitBitVect *res = nullptr;
+  try {
+    res = RDKit::PubchemFingerprints::getFingerprintAsBitVect(*mol);
+  } catch (...) {
+    elog(ERROR, "makePubchemBFP: Unknown exception");
   }
   if (res) {
     std::string *sres = new std::string(BitVectToBinaryText(*res));

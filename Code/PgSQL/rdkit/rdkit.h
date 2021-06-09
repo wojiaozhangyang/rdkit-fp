@@ -219,6 +219,7 @@ CSfp makeTopologicalTorsionSFP(CROMol data);
 CBfp makeAtomPairBFP(CROMol data);
 CBfp makeTopologicalTorsionBFP(CROMol data);
 CBfp makeMACCSBFP(CROMol data);
+CBfp makePubchemBFP(CROMol data);
 CBfp makeAvalonBFP(CROMol data, bool isQuery, unsigned int bitFlags);
 
 /*

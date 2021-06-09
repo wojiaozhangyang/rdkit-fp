@@ -1,7 +1,7 @@
 
 rdkit_library(Fingerprints
               Fingerprints.cpp PatternFingerprints.cpp MorganFingerprints.cpp
-              AtomPairs.cpp MACCS.cpp MHFP.cpp FingerprintGenerator.cpp 
+              AtomPairs.cpp MACCS.cpp Pubchem.cpp MHFP.cpp FingerprintGenerator.cpp 
               AtomPairGenerator.cpp MorganGenerator.cpp RDKitFPGenerator.cpp 
               FingerprintUtil.cpp TopologicalTorsionGenerator.cpp
               LINK_LIBRARIES DataStructs Subgraphs SubstructMatch SmilesParse GraphMol RDGeneral
@@ -12,6 +12,7 @@ rdkit_headers(AtomPairs.h
               Fingerprints.h
               MorganFingerprints.h
               MACCS.h
+              Pubchem.h
               MHFP.h
               FingerprintGenerator.h
               AtomPairGenerator.h

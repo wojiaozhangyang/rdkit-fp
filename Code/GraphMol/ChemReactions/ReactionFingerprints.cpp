@@ -38,6 +38,7 @@
 #include <GraphMol/Fingerprints/AtomPairs.h>
 #include "GraphMol/ChemReactions/ReactionFingerprints.h"
 #include <GraphMol/Fingerprints/MACCS.h>
+#include <GraphMol/Fingerprints/Pubchem.h>
 #include <GraphMol/Fingerprints/MorganFingerprints.h>
 #include <DataStructs/SparseIntVect.h>
 #include <GraphMol/ChemReactions/ReactionUtils.h>
