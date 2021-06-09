@@ -27,7 +27,7 @@ __pycache__/
 *.pyc
 /lib/
 *.pyd
-
+out
 #- autosaves and backups
 *~
 
@@ -115,3 +115,8 @@ __pycache__/
 Code/MinimalLib/dist
 MAIN_RDKIT_README*
 node_modules
+Code/JavaWrappers/csharp_wrapper/RDKitCSharpTest/obj/x86/Release/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttributes.cs
+Code/JavaWrappers/csharp_wrapper/RDKitCSharpTest/obj/x86/Release/RDKitCSharpTest.csproj.AssemblyReference.cache
+Code/JavaWrappers/csharp_wrapper/RDKitCSharpTest/obj/x86/Debug/RDKitCSharpTest.csproj.AssemblyReference.cache
+Code/JavaWrappers/csharp_wrapper/obj/Debug/RDKit2DotNet.csproj.AssemblyReference.cache
+Code/JavaWrappers/csharp_wrapper/RDKitCSharpTest/obj/x86/Debug/.NETFramework,Version=v4.0,Profile=Client.AssemblyAttributes.cs
