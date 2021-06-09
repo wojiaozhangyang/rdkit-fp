@@ -1505,7 +1505,6 @@ BOOST_PYTHON_MODULE(rdMolDescriptors) {
       RDKit::Descriptors::AtomFeatVersion;
 
 
-  // ======
   docString = "Returns the Pubchem keys for a molecule as an ExplicitBitVect";
   python::def("GetPubchemKeysFingerprint",
               RDKit::PubchemFingerprints::getFingerprintAsBitVect,

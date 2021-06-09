@@ -75,10 +75,10 @@ void GenerateFP(const RDKit::ROMol &mol, ExplicitBitVect &fp) {
   // }
 
   /* BIT 881 */
-  std::vector<int> mapping;
-  if (RDKit::MolOps::getMolFrags(mol, mapping) > 1) {
-    fp.setBit(881);
-  }
+  // std::vector<int> mapping;
+  // if (RDKit::MolOps::getMolFrags(mol, mapping) > 1) {
+  //   fp.setBit(881);
+  // }
 }
 }  // namespace
 

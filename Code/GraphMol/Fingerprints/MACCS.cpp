@@ -8,7 +8,7 @@
 //
 //  Contribution from Roger Sayle
 #include <vector>
-#include "MACCS.h"
+#include "Pubchem.h"
 #include <DataStructs/ExplicitBitVect.h>
 #include <GraphMol/RDKitBase.h>
 #include <GraphMol/SmilesParse/SmilesParse.h>
