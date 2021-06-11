@@ -37,6 +37,7 @@
 #include <GraphMol/Fingerprints/FingerprintUtil.h>
 #include <GraphMol/Fingerprints/Fingerprints.h>
 #include <GraphMol/Fingerprints/MACCS.h>
+#include <GraphMol/Fingerprints/Pubchem.h>
 %}
 
 %template(UIntPair) std::pair<boost::uint32_t,boost::uint32_t>;
@@ -49,7 +50,11 @@
 
 %newobject RDKit::MACCSFingerprints::getFingerprintAsBitVect;
 %rename(MACCSFingerprintMol) RDKit::MACCSFingerprints::getFingerprintAsBitVect;
-%include <GraphMol/Fingerprints/MACCS.h>
 
+%newobject RDKit::PubchemFingerprints::getFingerprintAsBitVect;
+%rename(PubchemFingerprintMol) RDKit::PubchemFingerprints::getFingerprintAsBitVect;
+
+%include <GraphMol/Fingerprints/MACCS.h>
+%include <GraphMol/Fingerprints/Pubchem.h>
 %ignore RDKit::RDKitFPUtils::enumerateAllPaths;
 %include <GraphMol/Fingerprints/FingerprintUtil.h>
