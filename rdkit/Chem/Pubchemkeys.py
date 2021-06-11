@@ -36,10 +36,10 @@ from rdkit.Chem import rdMolDescriptors
 from rdkit import DataStructs
 # these are SMARTS patterns corresponding to the MDL Pubchem keys
 smartsPatts = {
-  1: ('<H>',4),  #  4 H
-  2: ('<H>',8),  #  8 H
-  3: ('<H>',16),  #  16 H
-  4: ('<H>',32),  #  32 H
+  1: ('[H]',4),  #  4 H
+  2: ('[H]',8),  #  8 H
+  3: ('[H]',16),  #  16 H
+  4: ('[H]',32),  #  32 H
   5: ('[Li]',1),  #  1 Li
   6: ('[Li]',2),  #  2 Li
   7: ('[#5]',1),  #  1 B
@@ -293,12 +293,12 @@ smartsPatts = {
   255: ('[A;!#6]~1~A~A~A~A~A~A~A~A~A1',1),  #  1 non-aromatic heteroatom-containing ring size 10
   256: ('[aR]',1),  #  1 aromatic ring
   257: ('[aR;!#6]',1),  #  1 hetero-aromatic ring
-  258: ('<aromatic-rings>',2),  #  2 aromatic rings
-  259: ('<hetero-aromatic-rings>',2),  #  2 hetero-aromatic rings
-  260: ('<aromatic-rings>',3),  #  3 aromatic rings
-  261: ('<hetero-aromatic-rings>',3),  #  3 hetero-aromatic rings
-  262: ('<aromatic-rings>',4),  #  4 aromatic rings
-  263: ('<hetero-aromatic-rings>',4),  #  4 hetero-aromatic rings
+  258: ('[aR]',2),  #  2 aromatic rings
+  259: ('[aR;!#6]',2),  #  2 hetero-aromatic rings
+  260: ('[aR]',3),  #  3 aromatic rings
+  261: ('[aR;!#6]',3),  #  3 hetero-aromatic rings
+  262: ('[aR]',4),  #  4 aromatic rings
+  263: ('[aR;!#6]',4),  #  4 hetero-aromatic rings
   264: ('[Li;!H0]',1),  #  Li-H
   265: ('[Li]~[Li]',1),  #  Li-Li
   266: ('[Li]~[#5]',1),  #  Li-B
